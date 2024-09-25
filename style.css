@@ -1,0 +1,67 @@
+html {
+    font-size: 18px;
+    font-family: 'Josefin Sans';
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: no-repeat url(images/bg-desktop-light.jpg) hsl(0, 0%, 98%);
+    /*very light gray*/
+    background-size: cover;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    width: 350px;
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    font-weight: 700;
+    font-size: 2rem;
+    color: white;
+    text-align: left;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+
+input {
+    font-family: 'Josefin Sans';
+    font-weight: 400;
+    font-size: 1rem;
+    width: 350px;
+}
+
+input::placeholder {
+    color: hsl(236, 9%, 61%); /*dark grayish blue*/
+}
+
+#todobox {
+    display: flex;
+    flex-direction: column;
+}
+
+#boxfoot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.75rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(220, 98%, 61%);
+}
