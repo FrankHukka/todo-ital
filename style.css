@@ -15,8 +15,12 @@ body {
 
 header {
     display: grid;
-    grid-template-columns: 1fr 30px;
+    grid-template-columns: 1fr auto;
     width: 350px;
+}
+
+header img {
+    margin: 20px;
 }
 
 h1 {
@@ -63,5 +67,5 @@ input::placeholder {
 }
 
 .attribution a {
-    color: hsl(220, 98%, 61%);
+    color: #1034a6;
 }
