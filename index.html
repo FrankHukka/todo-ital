@@ -20,15 +20,22 @@
     <img src="images/icon-moon.svg" alt="Toggle dark mode" />
   </header>
   <div class="content">
-    <div id="create">
-      <input type="text" name="new" placeholder="Create a new todo...">
-    </div>
+    <table id="create">
+      <tr>
+        <td>
+          <button class="newb"></button>
+        </td>
+        <td id="cr-td">
+          <input type="text" name="new" placeholder="Create a new todo...">
+        </td>
+      </tr>
+    </table>
 
     <div id="todobox">
-      <table>
+      <table class="todo-list">
       </table>
       <div id="boxfoot">
-        <p id="items-left"><!-- Add dynamic number --> items left</p>
+        <p id="items-left"><!-- Add dynamic number items left --> </p>
 
         <p class="click show">All</p>
         <p class="click show">Active</p>
