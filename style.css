@@ -63,6 +63,7 @@ tr {
 td {
     display: flex;
     align-items: center;
+    /* height: 60px; */
 }
 
 /* Input field */
@@ -81,12 +82,11 @@ button {
     border-radius: 50%;
     border: 1px solid var(--very-light-gb);
     background-color: transparent;
-    /* margin: 15px; */
 }
 
 #newb-cont,
 .listed {
-    width: 60px;
+    width: 50px;
     justify-content: center;
 }
 
@@ -145,7 +145,12 @@ button:hover {
     flex-direction: row;
     justify-content: space-between;
     font-size: 0.75rem;
+    padding: 0 20px;
 }
+
+
+
+/* attribution */
 
 .attribution {
     font-size: 11px;

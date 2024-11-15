@@ -7,6 +7,10 @@ const leftBox = document.querySelector("output");
 
 const rows = todoList.rows;
 
+const itemsLeft = () => {
+    leftBox.textContent = rows.length;
+}
+
 const addNewTodo = () => {
     const todoRow = todoList.insertRow();
     todoRow.classList.add("todo-row");
@@ -19,17 +23,15 @@ const addNewTodo = () => {
     todoItem.classList.add("list-item");
 
     const removeBox = todoRow.insertCell(2);
-    const xB = document.createElement("img");
-    xB.setAttribute("src", "images/icon-cross.svg");
+    const xB = new Image();
+    xB.src = "images/icon-cross.svg";
     removeBox.classList.add("remove");
     removeBox.append(xB);
 
-    xB.addEventListener("click", () => {
-        todoList.deleteRow(todoRow);
-        leftBox.textContent = rows.length;
-    });
+    // xB.addEventListener("click", () => {
+    //     todoList.deleteRow(todoRow);
+    // });
 
-    leftBox.textContent = rows.length;
     todoItem.textContent = todoCreate.value;
     todoCreate.value = "";
 }
@@ -40,6 +42,7 @@ todoCreate.addEventListener("keydown", (eve) => {
             eve.preventDefault;
         } else {
             addNewTodo();
+            itemsLeft();
         }
     }
 });
@@ -49,5 +52,28 @@ newBtn.addEventListener("click", (ev) => {
         ev.preventDefault;
     } else {
         addNewTodo();
+        itemsLeft();
     }
 });
+
+todoList.addEventListener("click", (e) => {
+    if (e.target.matches("img")) {
+        console.log("voisko nyt toimia");
+    }
+})
+
+// for (const row of rows) {
+//     row.addEventListener("click", (e) => {
+//         if (e.target.classList.contains("remove")) {
+//             todoList.deleteRow(row);
+//             itemsLeft();
+//         }
+        
+//     })
+// }
+
+// rows.forEach(row => {
+//     row.addEventListener("click", () => {
+//         console.log("delete");
+//     })
+// });
